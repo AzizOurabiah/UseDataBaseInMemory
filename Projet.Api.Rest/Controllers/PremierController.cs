@@ -33,7 +33,7 @@ namespace Projet.Api.Rest.Controllers
             {
                 return BadRequest("Name doesn't existe !");
             }
-            return Ok(_databaseContext.ItemModels);
+            return Ok(result);
 
         }
         [HttpPost]
@@ -42,6 +42,19 @@ namespace Projet.Api.Rest.Controllers
             _databaseContext.ItemModels.Add(item);
             await _databaseContext.SaveChangesAsync();
             return CreatedAtAction("Post", item);
+        }
+        [HttpPut]
+        public async Task<ActionResult> Put(ItemModel itemModel)
+        {
+            var result = await _databaseContext.ItemModels.FindAsync($"{itemModel.Name}");
+            if(result != null)
+            {
+                result.Name = itemModel.Name;
+                result.Age = itemModel.Age;
+                await _databaseContext.SaveChangesAsync();
+                return Ok(result);
+            }
+            return BadRequest("Item doesn't existe !");
         }
         //private readonly DatabaseContext _context;
 
