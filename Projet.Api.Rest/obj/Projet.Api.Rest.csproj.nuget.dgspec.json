@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aziz\\Downloads\\Projet.Api.Rest (4)\\Projet.Api.Rest\\Projet.Api.Rest.csproj": {}
+    "C:\\Users\\Aziz\\Source\\Repos\\UseDataBaseInMemory\\Projet.Api.Rest\\Projet.Api.Rest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aziz\\Downloads\\Projet.Api.Rest (4)\\Projet.Api.Rest\\Projet.Api.Rest.csproj": {
+    "C:\\Users\\Aziz\\Source\\Repos\\UseDataBaseInMemory\\Projet.Api.Rest\\Projet.Api.Rest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aziz\\Downloads\\Projet.Api.Rest (4)\\Projet.Api.Rest\\Projet.Api.Rest.csproj",
+        "projectUniqueName": "C:\\Users\\Aziz\\Source\\Repos\\UseDataBaseInMemory\\Projet.Api.Rest\\Projet.Api.Rest.csproj",
         "projectName": "Projet.Api.Rest",
-        "projectPath": "C:\\Users\\Aziz\\Downloads\\Projet.Api.Rest (4)\\Projet.Api.Rest\\Projet.Api.Rest.csproj",
+        "projectPath": "C:\\Users\\Aziz\\Source\\Repos\\UseDataBaseInMemory\\Projet.Api.Rest\\Projet.Api.Rest.csproj",
         "packagesPath": "C:\\Users\\Aziz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aziz\\Downloads\\Projet.Api.Rest (4)\\Projet.Api.Rest\\obj\\",
+        "outputPath": "C:\\Users\\Aziz\\Source\\Repos\\UseDataBaseInMemory\\Projet.Api.Rest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Aziz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

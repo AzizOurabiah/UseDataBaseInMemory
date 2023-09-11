@@ -9,6 +9,22 @@ namespace Projet.Api.Rest.Controllers
     [ApiController]
     public class PremierController : ControllerBase
     {
+        //On crée la variable qui accede èa la database context
+        private readonly DatabaseContext _databaseContext;
+
+        //Injection de dépendance de dataBaseContext
+        public PremierController(DatabaseContext databaseContext)
+        {
+            //Injection de dépendance
+            _databaseContext = databaseContext;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<ItemModel>>> Get()
+        {
+            var result = await _databaseContext.ItemModels.ToListAsync();
+            return Ok(result);
+        }
 
         //private readonly DatabaseContext _context;
 
@@ -17,7 +33,7 @@ namespace Projet.Api.Rest.Controllers
         //    //injection de dépendances
         //    _context = context;
         //}
-        
+
         //[HttpGet]
         //public async Task<ActionResult<List<ItemModel>>> Get()
         //{

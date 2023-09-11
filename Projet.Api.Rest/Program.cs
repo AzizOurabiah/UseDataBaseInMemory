@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+//Ajout de service DbContext pour pouvoir utiliser et crée les tables in memory
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseInMemoryDatabase("MyDataBase"));
 
 builder.Services.AddControllers();
