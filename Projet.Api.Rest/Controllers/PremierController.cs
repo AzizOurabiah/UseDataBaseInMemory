@@ -25,7 +25,13 @@ namespace Projet.Api.Rest.Controllers
             var result = await _databaseContext.ItemModels.ToListAsync();
             return Ok(result);
         }
-
+        [HttpPost]
+        public async Task<ActionResult<List<ItemModel>>> Post(ItemModel item)
+        {
+            _databaseContext.ItemModels.Add(item);
+            await _databaseContext.SaveChangesAsync();
+            return CreatedAtAction("Post", item);
+        }
         //private readonly DatabaseContext _context;
 
         //public PremierController(DatabaseContext context)
