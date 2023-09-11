@@ -56,6 +56,22 @@ namespace Projet.Api.Rest.Controllers
             }
             return BadRequest("Item doesn't existe !");
         }
+
+        [HttpDelete]
+        public async Task<ActionResult<List<ItemModel>>> Delete(string name)
+        {
+            var result = await _databaseContext.ItemModels.FindAsync( name);
+
+            if(result != null)
+            {
+                _databaseContext.ItemModels.Remove(result);
+
+                await _databaseContext.SaveChangesAsync();
+
+                return Ok(result);
+            }
+            return BadRequest("Item dosn't existe ");
+        }
         //private readonly DatabaseContext _context;
 
         //public PremierController(DatabaseContext context)
