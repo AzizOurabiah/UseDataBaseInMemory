@@ -25,6 +25,17 @@ namespace Projet.Api.Rest.Controllers
             var result = await _databaseContext.ItemModels.ToListAsync();
             return Ok(result);
         }
+        [HttpGet("{name}")]
+        public async Task<ActionResult<List<ItemModel>>> Get(string name)
+        {
+            var result = await _databaseContext.ItemModels.FindAsync(name);
+            if(result == null)
+            {
+                return BadRequest("Name doesn't existe !");
+            }
+            return Ok(_databaseContext.ItemModels);
+
+        }
         [HttpPost]
         public async Task<ActionResult<List<ItemModel>>> Post(ItemModel item)
         {
